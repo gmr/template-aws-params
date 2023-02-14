@@ -18,9 +18,9 @@ func init() {
 
 func main() {
 	app := cli.NewApp()
-	app.Name = "env-aws-params"
-	app.Usage = "Application entry-point that injects SSM Parameter Store values as Environment Variables"
-	app.UsageText = "env-aws-params [global options] -p prefix command [command arguments]"
+	app.Name = "template-aws-params"
+	app.Usage = "Application entry-point that renders files using SSM Parameter Store values"
+	app.UsageText = "template-aws-params [global options] -p prefix command [command arguments]"
 	app.Version = VersionString
 	app.Flags = cliFlags()
 	app.Action = func(c *cli.Context) error {
